@@ -16,9 +16,9 @@
  *
  */
 
+#include <fstream>
 #include <memory>
 #include <string>
-#include <fstream>
 
 #include "absl/flags/flag.h"
 #include "absl/flags/parse.h"
