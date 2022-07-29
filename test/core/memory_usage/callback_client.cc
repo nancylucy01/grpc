@@ -101,7 +101,7 @@ void GetBeforeSnapshot(std::shared_ptr<grpc::Channel> channel,
                        long& before_server_memory) {
   std::unique_ptr<grpc::testing::BenchmarkService::Stub> stub =
       grpc::testing::BenchmarkService::NewStub(channel);
-      
+
   // Start a call.
   struct CallParams {
     grpc::ClientContext context;
@@ -167,9 +167,9 @@ int main(int argc, char** argv) {
         GRPC_CHANNEL_READY,
         std::chrono::system_clock::now() + std::chrono::milliseconds(1)));
     // channels_list[i]->~Channel();
-    //channels_list[i].reset();
+    // channels_list[i].reset();
   }
-  
+
   gpr_log(GPR_INFO, "Client Done");
   return 0;
 }
